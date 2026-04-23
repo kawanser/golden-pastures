@@ -92,27 +92,40 @@ body {
   }
 
   #hero {
-    @apply relative w-full min-h-[calc(100vh-80px)];
+    @apply relative w-full min-h-[100dvh];
 
-    #hero video {
+    video {
       @apply absolute inset-0 w-full h-full object-cover;
+    }
+    
+    #hero::before {
+      content: "";
+      @apply absolute inset-0 bg-black/50 md:bg-black/30 z-0;
     }
 
     .hero-banner {
-      @apply max-w-360 mx-auto absolute inset-0 flex flex-col justify-center items-start text-center z-10 px-5;
+      @apply max-w-[1440px] mx-auto absolute inset-0 
+            flex flex-col justify-center 
+            items-start md:items-center
+            text-left md:text-center
+            z-10 px-5;
     }
 
     h1 {
-      @apply text-h0 text-accent-500 z-25 mb-6;
+      @apply text-[2.5rem] md:text-h0 text-accent-500 mb-4;
     }
 
     h5 {
-      @apply text-h5 text-accent-50 italic text-left mb-8;
+      @apply text-[1rem] md:text-h5 text-accent-50 italic mb-6 text-left;
     }
 
     button {
-      @apply bg-primary-300 w-[280px] h-[100px] px-[16px] py-[16px] text-primary-800 text-h3 rounded-[12px]
-              hover:bg-primary-400 hover:text-primary-50 hover:transition duration-150;
+      @apply bg-primary-300 
+            w-full max-w-[280px]
+            h-[56px] md:h-[80px]
+            text-[1rem] md:text-h3
+            rounded-[12px]
+            hover:bg-primary-400 hover:text-primary-50 transition duration-500;
     }
   }
 }

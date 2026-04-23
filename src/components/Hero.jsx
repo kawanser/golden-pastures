@@ -30,6 +30,7 @@ const Hero = () => {
           playsInline
           preload="auto"
           autoPlay
+          loop
         >
         </video>
         <div className='hero-banner'>
