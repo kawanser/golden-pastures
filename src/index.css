@@ -60,5 +60,9 @@ body {
 }
 
 @layer components {
-
+  nav {
+    img {
+      @apply size-[32px]
+    }
+  }
 }
