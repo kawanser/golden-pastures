@@ -1,21 +1,20 @@
 import React from 'react'
-import { navLinks } from "../../constants/index";
+import { navLinks } from "../../constants";
 
 const Nav = () => {
   return (
     <nav>
       <div>
-        <a href="#home" className="">
+        <a href="#about" className="">
           <img src="/images/icon-gold.png" alt="Golden Pasture logo" />
-          <p>Golden Pasture</p>
         </a>
+        <ul>{navLinks.map((link) =>
+            <li key={link.id}>
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          )}
+        </ul>
       </div>
-      <ul>{navLinks.map((link) =>
-          <li key={link.id}>
-          <a href={`#${link.id}`}>{link.title}</a>
-          </li>
-        )}
-      </ul>
     </nav>
   );
 }

@@ -34,14 +34,14 @@
     theme: --text-[name]
     usage: text-[name]
   */
-  --text-300: 1rem;
-  --text-400: 1.25rem;
-  --text-500: 1.5625rem;
-  --text-600: 1.9375rem;
-  --text-700: 2.4375rem;
-  --text-800: 3.0625rem;
-  --text-900: 3.8125rem;
-  --text-1000: 4.75rem;
+  --text-body: 1rem;
+  --text-h6: 1.25rem;
+  --text-h5: 1.5625rem;
+  --text-h4: 1.9375rem;
+  --text-h3: 2.4375rem;
+  --text-h2: 3.0625rem;
+  --text-h1: 3.8125rem;
+  --text-h0: 4.75rem;
 }
 
 @layer utilities {
@@ -61,8 +61,26 @@ body {
 
 @layer components {
   nav {
+    @apply w-full h-[80px] fixed top-0 left-0 bg-primary-500 flex;
+
+    div {
+          @apply max-w-360 mx-auto w-full px-5 flex md:flex-row flex-col md:justify-between items-center gap-5 py-5;
+      }
+
     img {
-      @apply size-[32px]
+      @apply size-[50px] rounded-full;
+    }
+
+    ul {
+      @apply flex gap-[24px];
+    }
+
+    li {
+      @apply text-accent-50 text-h6 font-bold;
+    }
+
+    a {
+      @apply hover:text-accent-400;
     }
   }
 }

@@ -13,3 +13,6 @@ const navLinks = [
     },
 ];
 
+export {
+    navLinks
+}
