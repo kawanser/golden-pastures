@@ -8,7 +8,9 @@
     usage: utility-token e.g. text-accent-400
   */
   
+  --color-primary-50: hsl(129, 75% ,89%);
   --color-primary-300: hsl(132,29% ,52%);
+  --color-primary-400: hsl(132,28% ,41%);
   --color-primary-500: hsl(132,29% ,31%);
   --color-primary-800: hsl(132,36% ,13%);
 
@@ -57,15 +59,20 @@ body {
     background-color: var(--color-secondary-200);
     color: var(--color-primary-500);
     overflow-x: hidden;
+    font-family: var(--font-primary);
 }
 
 @layer components {
+  main {
+        @apply w-full overflow-x-hidden;
+  }
+
   nav {
-    @apply w-full h-[80px] fixed top-0 left-0 bg-primary-500 flex;
+    @apply w-full fixed top-0 left-0 bg-primary-500/75 flex z-50;
 
     div {
-          @apply max-w-360 mx-auto w-full px-5 flex md:flex-row flex-col md:justify-between items-center gap-5 py-5;
-      }
+      @apply max-w-360 mx-auto w-full px-5 flex md:flex-row flex-col md:justify-between items-center gap-5 py-5;
+    }
 
     img {
       @apply size-[50px] rounded-full;
@@ -81,6 +88,31 @@ body {
 
     a {
       @apply hover:text-accent-400;
+    }
+  }
+
+  #hero {
+    @apply relative w-full min-h-[calc(100vh-80px)];
+
+    #hero video {
+      @apply absolute inset-0 w-full h-full object-cover;
+    }
+
+    .hero-banner {
+      @apply max-w-360 mx-auto absolute inset-0 flex flex-col justify-center items-start text-center z-10 px-5;
+    }
+
+    h1 {
+      @apply text-h0 text-accent-500 z-25 mb-6;
+    }
+
+    h5 {
+      @apply text-h5 text-accent-50 italic text-left mb-8;
+    }
+
+    button {
+      @apply bg-primary-300 w-[280px] h-[100px] px-[16px] py-[16px] text-primary-800 text-h3 rounded-[12px]
+              hover:bg-primary-400 hover:text-primary-50 hover:transition duration-150;
     }
   }
 }

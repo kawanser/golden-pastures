@@ -4,8 +4,8 @@ import { navLinks } from "../../constants";
 const Nav = () => {
   return (
     <nav>
-      <div>
-        <a href="#about" className="">
+      <div id="about">
+        <a href="#about">
           <img src="/images/icon-gold.png" alt="Golden Pasture logo" />
         </a>
         <ul>{navLinks.map((link) =>
