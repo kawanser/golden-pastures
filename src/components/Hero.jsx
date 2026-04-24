@@ -37,7 +37,6 @@ const Hero = () => {
           <h1> GOLDEN PASTURES </h1>
           <h5>
             Fresh, organic dairy delivered straight from our
-            <br/>
             farm to your home or business.
           </h5>
           <button

@@ -112,7 +112,7 @@ body {
     }
 
     h1 {
-      @apply text-[2.5rem] md:text-h0 text-accent-500 mb-4;
+      @apply text-[2.5rem] md:text-[8.789rem] text-accent-500;
     }
 
     h5 {
@@ -120,7 +120,7 @@ body {
     }
 
     button {
-      @apply bg-primary-300 
+      @apply bg-primary-300 text-primary-800
             w-full max-w-[280px]
             h-[56px] md:h-[80px]
             text-[1rem] md:text-h3
