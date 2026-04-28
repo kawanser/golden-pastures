@@ -44,6 +44,8 @@
   --text-h2: 3.0625rem;
   --text-h1: 3.8125rem;
   --text-h0: 4.75rem;
+
+  --nav-height: 80px;
 }
 
 @layer utilities {
@@ -58,17 +60,16 @@ body {
     scroll-behavior: smooth;
     background-color: var(--color-secondary-200);
     color: var(--color-primary-500);
-    overflow-x: hidden;
     font-family: var(--font-primary);
 }
 
 @layer components {
   main {
-        @apply w-full overflow-x-hidden;
+        @apply w-full;
   }
 
   nav {
-    @apply w-full fixed top-0 left-0 bg-primary-500/75 flex z-50;
+    @apply w-full fixed top-0 left-0 bg-primary-500/75 flex z-50 h-[var(--nav-height)];
 
     div {
       @apply max-w-360 mx-auto w-full px-5 flex md:flex-row flex-col md:justify-between items-center gap-5 py-5;
@@ -127,5 +128,34 @@ body {
             rounded-[12px]
             hover:bg-primary-400 hover:text-primary-50 transition duration-500;
     }
+  }
+
+  #story {
+    
+    @apply max-w-[1440px] mx-auto;
+
+    #story-container {
+      @apply flex items-center justify-center flex-col max-w-[1440px] mx-auto;
+    }
+
+    .container {
+      @apply flex items-center justify-center max-w-[1440px] mx-auto gap-25 h-[1080px];
+    }
+    
+    h1 {
+      @apply sticky top-[80px] z-10 text-h1 font-bold;
+    }
+
+    p {
+      @apply text-h5 h-[130px] w-[440px] text-center;
+    }
+
+    img {
+      @apply h-[450px] w-[600px];
+    }
+  }
+
+  #testimonials {
+    @apply h-[2000px];
   }
 }
