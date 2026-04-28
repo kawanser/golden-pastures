@@ -54,9 +54,9 @@ const Story = () => {
       .from(".story-item-3 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut"})
       .from(".story-item-3 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"},"<")
       .to({}, { duration: 5 })
-      .to(".story-item-3 img", { opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"})
-      .to(".story-item-3 p", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut", }, "<")
-      .to("#story h1", { opacity: 0, duration: 1.5, ease: "power1.inOut"}, "<")
+      .to(".story-item-3 img", { opacity: 0, y: 100, duration: 1, ease: "power1.inOut"})
+      .to(".story-item-3 p", { opacity: 0, y: -100, duration: 1, ease: "power1.inOut", }, "<")
+      .to("#story h1", { opacity: 0, duration: 1, ease: "power1.inOut"}, "<")
   }, []);
 
   return (

@@ -20,6 +20,7 @@
   --color-secondary-800: hsl(50,100% ,20%);
 
   --color-accent-50: hsl(32,100% ,97%);
+  --color-accent-200: hsl(35,100% ,89%);
   --color-accent-400: hsl(39,100% ,72%);
   --color-accent-500: hsl(45,100% ,50%);
   --color-accent-600: hsl(45,100% ,39%);
@@ -132,7 +133,7 @@ body {
 
   #story {
     
-    @apply max-w-[1440px] mx-auto;
+    @apply max-w-[1440px] mx-auto mb-[96px];
 
     #story-container {
       @apply flex items-center justify-center flex-col max-w-[1440px] mx-auto;
@@ -156,6 +157,6 @@ body {
   }
 
   #testimonials {
-    @apply h-[2000px];
+    @apply bg-accent-200 w-full h-[1080px] mt-[500px];
   }
 }
