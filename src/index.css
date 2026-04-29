@@ -185,7 +185,7 @@ body {
   }
   
   #working-area {
-    @apply max-w-[1440px] mx-auto;
+    @apply max-w-[1440px] mx-auto min-h-[100vh] flex flex-col justify-center items-center;
     
     h1 {
       @apply md:top-(--nav-height) z-10 text-h3 md:text-h2 font-bold text-center md:text-right pt-[36px];
