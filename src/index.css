@@ -192,7 +192,15 @@ body {
     }
     
     .container {
-      @apply flex gap-[60px] mt-[100px];
+      @apply flex gap-[60px] mt-[144px];
+    }
+
+    .arrows {
+      @apply flex gap-15 items-center justify-center mt-15;
+    }
+
+    .arrows button {
+      @apply cursor-pointer;
     }
   }
 }

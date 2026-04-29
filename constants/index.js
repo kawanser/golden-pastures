@@ -70,6 +70,14 @@ const testimonials = [
     user: "Teresa",
     business: "The Playground",
   },
+  {
+    id: 5,
+    imgPath: "/images/customer-5.jpg",
+    testimonial:
+          "\"My customer can identify if I use Golden Pasture's milk or not. It's crazy!\"",
+    user: "Bob",
+    business: "Cafe Bolpuen",
+  },
 ];
 
 export {
