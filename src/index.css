@@ -133,7 +133,7 @@ body {
 
   #story {
     
-    @apply max-w-[1440px] mx-auto mb-[96px];
+    @apply max-w-[1440px] mx-auto mb-[96px] mb-[600px];
 
     #story-container {
       @apply flex items-center justify-center flex-col max-w-[1440px] mx-auto;
@@ -180,7 +180,7 @@ body {
   }
 
   #testimonials {
-    @apply bg-accent-200 w-full h-[1080px] mt-[500px];
+    @apply bg-accent-200 w-full h-[1080px];
 
   }
   
@@ -192,7 +192,7 @@ body {
     }
     
     .container {
-      @apply flex gap-[60px] mt-[144px];
+      @apply flex gap-[60px] mt-[72px];
     }
 
     .arrows {
