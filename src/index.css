@@ -203,4 +203,39 @@ body {
       @apply cursor-pointer;
     }
   }
+
+  #subhero {
+    @apply relative w-full h-[1080px];
+    
+    #subhero::before {
+      content: "";
+      @apply absolute inset-0 bg-black/50 md:bg-black/30 z-0;
+    }
+
+    .subhero-banner {
+      @apply max-w-[1440px] mx-auto absolute inset-0 
+            flex flex-col justify-center 
+            items-start 
+            text-left
+            z-10 px-5;
+    }
+
+    img {
+      @apply w-full h-[1080px]
+    }
+
+    h1 {
+      @apply text-[2.5rem] md:text-h2 md:font-thin text-secondary-500 w-[600px];
+    }
+
+    button {
+      @apply bg-primary-300 text-primary-800
+            w-full max-w-[280px] mt-[32px]
+            h-[56px] md:h-[80px]
+            text-[1rem] md:text-h3
+            rounded-[12px]
+            hover:bg-primary-400 hover:text-primary-50 transition duration-500;
+    }
+  }
 }
+

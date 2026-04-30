@@ -57,8 +57,8 @@ const Testimonials = () => {
 
     gsap.fromTo(
       cards,
-      { opacity: 0, y: 50},
-      { opacity: 1, y:0, stagger:0.1, ease: "power1.inOut" },
+      {y: 50},
+      {y:0, stagger:0.1, ease: "power1.inOut" },
     )
   }, [currentIndex]);
 

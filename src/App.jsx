@@ -2,9 +2,10 @@ import React from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Story from './components/Story'
+import Testimonials from './components/Testimonials';
+import SubHero from './components/SubHero'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
-import Testimonials from './components/Testimonials';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +15,8 @@ const App = () => {
       <Nav />
       <Hero />
       <Story />
-      <Testimonials/>
+      <Testimonials />
+      <SubHero/>
     </main>
   )
 }
