@@ -6,6 +6,7 @@ import Testimonials from './components/Testimonials';
 import SubHero from './components/SubHero'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
+import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,8 @@ const App = () => {
       <Hero />
       <Story />
       <Testimonials />
-      <SubHero/>
+      <SubHero />
+      <Footer/>
     </main>
   )
 }
