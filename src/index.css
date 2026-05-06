@@ -211,7 +211,7 @@ body {
     
     #subhero::before {
       content: "";
-      @apply absolute inset-0 bg-black/50 md:bg-black/30 z-0;
+      @apply absolute inset-0 bg-black/50 lg:bg-black/30 z-0;
     }
 
     .subhero-banner {
@@ -223,18 +223,18 @@ body {
     }
 
     img {
-      @apply w-full h-[1080px]
+      @apply w-full h-full object-cover
     }
 
     h1 {
-      @apply text-[2.5rem] md:text-h2 md:font-thin text-secondary-500 w-[600px];
+      @apply text-h4 md:text-h2 lg:text-h2 lg:font-thin text-secondary-500 lg:w-[600px];
     }
 
     button {
       @apply bg-primary-300 text-primary-800
-            w-full max-w-[280px] mt-[32px]
-            h-[56px] md:h-[80px]
-            text-[1rem] md:text-h3
+            w-[140px] md:w-full md:max-w-[280px] lg:w-full lg:max-w-[280px] mt-[32px]
+            h-[56px] lg:h-[80px]
+            text-h6 md:text-h4 lg:text-h3
             rounded-[12px]
             hover:bg-primary-400 hover:text-primary-50 transition duration-500;
     }
