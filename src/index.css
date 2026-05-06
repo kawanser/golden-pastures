@@ -70,14 +70,14 @@ body {
   }
 
   nav {
-    @apply w-dvw md:w-full fixed top-0 left-0 bg-primary-500/75 z-50 h-[96px] md:h-(--nav-height);
+    @apply w-dvw md:w-full fixed top-0 left-0 bg-primary-500/75 z-50 h-[96px] md:h-[80px] lg:h-(--nav-height);
 
     div {
       @apply max-w-360 mx-auto w-full px-5 flex md:flex-row flex-col md:justify-between items-center gap-5 py-5;
     }
 
     img {
-      @apply size-[25px] md:size-[50px] rounded-full;
+      @apply size-[25px] md:size-[35px] lg:size-[50px] rounded-full;
     }
 
     ul {
@@ -85,7 +85,7 @@ body {
     }
 
     li {
-      @apply text-accent-50 text-body md:text-h6 font-bold;
+      @apply text-accent-50 text-body md:text-body lg:text-h6 font-bold;
     }
 
     a {
@@ -94,7 +94,7 @@ body {
   }
 
   #hero {
-    @apply relative w-full min-h-[100dvh] overflow-x-hidden;
+    @apply relative w-full min-h-[100dvh] overflow-x-hidden mb-[24px];
 
     video {
       @apply absolute inset-0 w-full h-full object-cover;
@@ -114,18 +114,18 @@ body {
     }
 
     h1 {
-      @apply text-[2.5rem] md:text-[8.789rem] text-accent-500;
+      @apply text-[2.5rem] md:text-h1 lg:text-[8.789rem] text-accent-500;
     }
 
     h5 {
-      @apply text-[1rem] md:text-h5 text-accent-50 italic mb-6 text-left;
+      @apply text-[1rem] md:text-h6 lg:text-h5 text-accent-50 italic mb-6 text-left;
     }
 
     button {
       @apply bg-primary-300 text-primary-800
             w-full max-w-[280px]
-            h-[56px] md:h-[80px]
-            text-[1rem] md:text-h3
+            h-[56px] lg:h-[80px] md:h-[65px]
+            text-[1rem] lg:text-h3 md:text-h4
             rounded-[12px]
             hover:bg-primary-400 hover:text-primary-50 transition duration-500;
     }
@@ -140,26 +140,26 @@ body {
     }
 
     .container {
-      @apply flex-col md:flex-row flex items-center justify-center max-w-[1440px] mx-auto gap-10 md:gap-25 h-[850px] md:h-[1080px];
+      @apply flex-col lg:flex-row flex items-center justify-center max-w-[1440px] mx-auto gap-10 lg:gap-25 h-[500px] md:h-[1080px] lg:h-[1080px];
     }
     
     h1 {
-      @apply sticky top-[120px] md:top-(--nav-height) z-10 text-h3 md:text-h2 font-bold text-center md:text-left;
+      @apply mt-[76px] md:sticky lg:sticky top-[120px] lg:top-(--nav-height) z-10 text-h4 md:text-h3 lg:text-h2 font-bold text-center lg:text-left;
     }
 
     p {
-      @apply text-body md:text-h5 h-[75px] w-[350px] md:h-[130px] md:w-[440px] text-center;
+      @apply text-body md:text-body lg:text-h5 md:h-[75px] md:w-[350px] h-[75px] w-[350px] lg:h-[130px] lg:w-[440px] text-center;
     }
 
     img {
-      @apply h-[250px] w-[350px] md:h-[450px] md:w-[600px];
+      @apply h-[250px] w-[350px] md:h-[350px] md:w-[550px] lg:h-[450px] lg:w-[600px];
     }
   }
 
   #testimonial-card {
     @apply flex items-center justify-center 
-          gap-[8px] w-[360px] h-[380px]
-          md:gap-[16px] md:w-[440px] md:h-[460px] 
+          gap-[8px] w-[250px] h-[350px]
+          lg:gap-[16px] lg:w-[440px] lg:h-[460px] 
         bg-secondary-100 rounded-[16px] drop-shadow-[4px_4px_4px_rgba(0,0,0,0.25)];
 
   }
@@ -168,15 +168,15 @@ body {
     @apply flex flex-col gap-[16px] p-[16px];
 
     .text-area {
-      @apply bg-secondary-200 p-[10px] md:p-[16px] rounded-[8px];
+      @apply bg-secondary-200 p-[10px] md:p-[12px] lg:p-[16px] rounded-[8px];
     }
 
     img {
-      @apply size-[250px] md:size-[300px] rounded-full mx-auto;
+      @apply size-[175px] lg:size-[300px] rounded-full mx-auto;
     }
   
     p {
-      @apply text-left text-secondary-800 text-[0.85rem] md:text-body;
+      @apply text-left text-secondary-800 text-[0.85rem] lg:text-body;
     }
 
   }
@@ -190,11 +190,11 @@ body {
     @apply max-w-[1440px] mx-auto h-[100vh] flex flex-col justify-center items-center;
     
     h1 {
-      @apply md:top-(--nav-height) z-10 text-h3 md:text-h2 font-bold text-center md:text-right pt-[36px];
+      @apply lg:top-(--nav-height) z-10 text-h4 lg:text-h2 font-bold text-center lg:text-right pt-[36px];
     }
     
     .container {
-      @apply flex justify-center md:flex gap-[60px] mt-[36px] md:mt-[72px];
+      @apply flex justify-center lg:flex gap-[20px] lg:gap-[60px] mt-[36px] lg:mt-[72px];
     }
 
     .arrows {

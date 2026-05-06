@@ -10,13 +10,7 @@ const SubHero = () => {
         trigger: "#subhero",
         start: "top center",
         end: "center center",
-        scrub: 1,
-        snap: {
-          snapTo: 0.1,
-          directional: false,
-          duration: 0.5,
-          ease: "power1.inOut",
-        },
+        scrub: 1
       },
     });
 
@@ -28,7 +22,7 @@ const SubHero = () => {
       opacity: 0,
       y: 50,
       ease: 'power1.inOut'
-    });
+    }, "<");
   }, [])
 
   return (

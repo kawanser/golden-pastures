@@ -5,59 +5,64 @@ import gsap from 'gsap';
 const Story = () => {
 
   useGSAP(() => {
-    const tl_1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".story-item-1",
-        start: "top top",
-        end: "bottom center",
-        scrub: 1,
-        pin: true,
-      },
-    });
+    const mm = gsap.matchMedia();
 
-    tl_1
-      .from("#story h1", { opacity: 0, duration: 1.5, ease: "power1.inOut",})
-      .from(".story-item-1 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",})
-      .from(".story-item-1 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut",},"<")
-      .to({}, { duration: 5 })
-      .to(".story-item-1 img", { opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"})
-      .to(".story-item-1 p",{ opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",},"<")
-    
-    const tl_2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".story-item-2",
-        start: "top top",
-        end: "bottom center",
-        scrub: 1,
-        pin: true,
-      },
-    });
+    mm.add("(min-width: 768px)", () => {
 
-    tl_2
-      .from(".story-item-2 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",})
-      .from(".story-item-2 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut",},"<")
-      .to({}, { duration: 5 })
-      .to(".story-item-2 img", { opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"})
-      .to(".story-item-2 p",{ opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",},"<")
-
-    const tl_3 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".story-item-3",
-        start: "top top",
-        end: "bottom center",
-        scrub: 1,
-        pin: true,
-      },
-    });
-
-    tl_3
-      .from(".story-item-3 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut"})
-      .from(".story-item-3 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"},"<")
-      .to({}, { duration: 5 })
-      .to(".story-item-3 img", { opacity: 0, y: 100, duration: 1, ease: "power1.inOut"})
-      .to(".story-item-3 p", { opacity: 0, y: -100, duration: 1, ease: "power1.inOut", }, "<")
-      .to("#story h1", { opacity: 0, duration: 1, ease: "power1.inOut"}, "<")
-  }, []);
+      const tl_1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".story-item-1",
+          start: "top top",
+          end: "bottom center",
+          scrub: 1,
+          pin: true,
+        },
+      });
+  
+      tl_1
+        .from("#story h1", { opacity: 0, duration: 1.5, ease: "power1.inOut",})
+        .from(".story-item-1 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",})
+        .from(".story-item-1 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut",},"<")
+        .to({}, { duration: 5 })
+        .to(".story-item-1 img", { opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"})
+        .to(".story-item-1 p",{ opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",},"<")
+      
+      const tl_2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".story-item-2",
+          start: "top top",
+          end: "bottom center",
+          scrub: 1,
+          pin: true,
+        },
+      });
+  
+      tl_2
+        .from(".story-item-2 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",})
+        .from(".story-item-2 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut",},"<")
+        .to({}, { duration: 5 })
+        .to(".story-item-2 img", { opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"})
+        .to(".story-item-2 p",{ opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut",},"<")
+  
+      const tl_3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".story-item-3",
+          start: "top top",
+          end: "bottom center",
+          scrub: 1,
+          pin: true,
+        },
+      });
+  
+      tl_3
+        .from(".story-item-3 img", { opacity: 0, y: -100, duration: 1.5, ease: "power1.inOut"})
+        .from(".story-item-3 p",{ opacity: 0, y: 100, duration: 1.5, ease: "power1.inOut"},"<")
+        .to({}, { duration: 5 })
+        .to(".story-item-3 img", { opacity: 0, y: 100, duration: 1, ease: "power1.inOut"})
+        .to(".story-item-3 p", { opacity: 0, y: -100, duration: 1, ease: "power1.inOut", }, "<")
+        .to("#story h1", { opacity: 0, duration: 1, ease: "power1.inOut"}, "<")
+    }
+  )}, []);
 
   return (
     <section id="story">
