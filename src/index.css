@@ -127,7 +127,7 @@ body {
             h-[56px] lg:h-[80px] md:h-[65px]
             text-[1rem] lg:text-h3 md:text-h4
             rounded-[12px]
-            hover:bg-primary-400 hover:text-primary-50 transition duration-500;
+            hover:bg-primary-400 hover:text-primary-50 transition duration-500 cursor-pointer;
     }
   }
 
@@ -235,8 +235,8 @@ body {
             w-[140px] md:w-full md:max-w-[280px] lg:w-full lg:max-w-[280px] mt-[32px]
             h-[56px] lg:h-[80px]
             text-h6 md:text-h4 lg:text-h3
-            rounded-[12px]
-            hover:bg-primary-400 hover:text-primary-50 transition duration-500;
+            rounded-[12px] 
+            hover:bg-primary-400 hover:text-primary-50 transition duration-500 cursor-pointer;
     }
   }
 
