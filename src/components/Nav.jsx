@@ -1,18 +1,20 @@
 import React from 'react'
 import { navLinks } from "../../constants";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav>
       <div id="about">
-        <a href="#about">
+        <Link to="/about">
           <img src="/images/icon-gold.png" alt="Golden Pasture logo" />
-        </a>
-        <ul>{navLinks.map((link) =>
+        </Link>
+        <ul>
+          {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`}>{link.title}</a>
+              <Link to={link.path}>{link.title}</Link>
             </li>
-          )}
+          ))}
         </ul>
       </div>
     </nav>

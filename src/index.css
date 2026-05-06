@@ -241,7 +241,7 @@ body {
   }
 
   #footer {
-    @apply bg-primary-800 h-[200px];
+    @apply bg-primary-800 h-[200px] text-accent-50;
     
     .grouping {
         @apply max-w-[1440px] mx-auto p-[16px] flex flex-col content-between gap-[36px];
@@ -252,7 +252,7 @@ body {
     }
 
     h6 {
-      @apply text-h6
+      @apply text-h6 mb-[8px];
     }
 
     p {

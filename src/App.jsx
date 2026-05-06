@@ -1,26 +1,23 @@
-import React from 'react'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Story from './components/Story'
-import Testimonials from './components/Testimonials';
-import SubHero from './components/SubHero'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from 'gsap';
-import Footer from './components/Footer';
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Story />
-      <Testimonials />
-      <SubHero />
-      <Footer/>
-    </main>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

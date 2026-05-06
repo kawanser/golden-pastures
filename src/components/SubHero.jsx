@@ -1,4 +1,5 @@
 import { useGSAP } from '@gsap/react';
+import { Link } from "react-router-dom";
 import React from 'react';
 import gsap from 'gsap';
 
@@ -9,20 +10,22 @@ const SubHero = () => {
       scrollTrigger: {
         trigger: "#subhero",
         start: "top center",
-        end: "center center",
+        end: "top top",
         scrub: 1
       },
     });
 
-    tl.from(".subhero-banner h1", {
-      opacity: 0,
-      y: 50,
-      ease: 'power1.inOut'
-    }).from(".subhero-banner button", {
-      opacity: 0,
-      y: 50,
-      ease: 'power1.inOut'
-    }, "<");
+    tl
+      .from(".subhero-banner h1", {
+        opacity: 0,
+        y: 50,
+        ease: 'power1.inOut',
+      })
+      .from(".subhero-banner button", {
+        opacity: 0,
+        y: 50,
+        ease: 'power1.inOut'
+      }, "<");
   }, [])
 
   return (
@@ -31,7 +34,9 @@ const SubHero = () => {
         <img src="/images/cow.jpg" alt="Image of a cow" />
         <div className="subhero-banner">
           <h1> Make Fresh Dairy Part of Your Everyday Life </h1>
-          <button type="button">ORDER NOW</button>
+          <button type="button">
+            <Link to="/products">ORDER NOW</Link>
+          </button>
         </div>
       </section>
     </>
