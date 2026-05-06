@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import TestimonialCard from './TestimonialCard'
 import { testimonials } from '../../constants'
 import { useGSAP } from '@gsap/react';
@@ -7,7 +7,19 @@ import gsap from 'gsap';
 const Testimonials = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
   const containerRef = useRef();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleCount(window.innerWidth < 768 ? 1 : 3);
+    };
+
+    handleResize(); // run once
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handlePrev = () => {
     if (currentIndex > 0) {
@@ -16,7 +28,7 @@ const Testimonials = () => {
   }
 
   const handleNext = () => {
-    if (currentIndex < testimonials.length - 3) {
+    if (currentIndex < testimonials.length - visibleCount) {
       setCurrentIndex(currentIndex + 1);
     }
   }
@@ -68,7 +80,7 @@ const Testimonials = () => {
         <h1>THEIR EXPERIENCES</h1>
         <div className="container" ref={containerRef}>
           {testimonials
-            .slice(currentIndex, currentIndex + 3)
+            .slice(currentIndex, currentIndex + visibleCount)
             .map(({ imgPath, testimonial, user, business }, index) => (
               <TestimonialCard
                 key={index}
@@ -89,7 +101,7 @@ const Testimonials = () => {
           </button>
           <button
             onClick={handleNext}
-            disabled={currentIndex >= testimonials.length - 3}
+            disabled={currentIndex >= testimonials.length - visibleCount}
           >
             <img
               src="/images/right-arrow.svg"
