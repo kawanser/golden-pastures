@@ -252,11 +252,11 @@ body {
     }
 
     h6 {
-      @apply text-h6 mb-[8px];
+      @apply text-[0.85rem] md:text-body text-h6 mb-[8px];
     }
 
     p {
-      @apply text-[0.85rem] md:text-body
+      @apply text-[0.7rem] md:text-[0.85rem] lg:text-body
     }
   }
 
