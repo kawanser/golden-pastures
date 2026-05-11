@@ -21,11 +21,6 @@ const SubHero = () => {
         y: 50,
         ease: 'power1.inOut',
       })
-      .from(".subhero-banner button", {
-        opacity: 0,
-        y: 50,
-        ease: 'power1.inOut'
-      }, "<");
   }, [])
 
   return (

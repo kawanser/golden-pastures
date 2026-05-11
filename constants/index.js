@@ -71,4 +71,49 @@ const testimonials = [
   },
 ];
 
-export { navLinks, storyContents, testimonials };
+const products = [
+  {
+    id: 1,
+    imgPath: "/images/bottled-milk.jpg",
+    name: "Fresh Bottled Milk - 500 mL",
+    price: "3.50",
+  },
+  {
+    id: 2,
+    imgPath: "/images/flavored-milk.jpg",
+    name: "Vanilla Bottled Milk - 500 mL",
+    price: "4.50",
+  },
+  {
+    id: 3,
+    imgPath: "/images/fresh-yogurt.jpg",
+    name: "Fresh Yogurt - 500 g",
+    price: "6.99",
+  },
+  {
+    id: 4,
+    imgPath: "/images/parmesan.jpg",
+    name: "Parmesan (Aged) - 100 g",
+    price: "8.00",
+  },
+  {
+    id: 5,
+    imgPath: "/images/gouda.jpg",
+    name: "Gouda - 250 g",
+    price: "7.99",
+  },
+  {
+    id: 6,
+    imgPath: "/images/cheddar.jpg",
+    name: "Cheddar - 250 g",
+    price: "5.00",
+  },
+  {
+    id: 7,
+    imgPath: "/images/assorted-cheese.jpg",
+    name: "Assorted Cheese - 500 g",
+    price: "15.99",
+  },
+];
+
+export { navLinks, storyContents, testimonials, products };
