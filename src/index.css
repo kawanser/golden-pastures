@@ -278,17 +278,16 @@ body {
           gap-[8px] w-[250px] h-[350px]
           lg:gap-[16px] lg:w-[420px] lg:h-[496px] 
         bg-secondary-100 rounded-[16px] drop-shadow-[4px_4px_4px_rgba(0,0,0,0.25)];
-
   }
   
   .product-contents {
 
     .text-area {
-      @apply p-[10px] md:p-[12px] lg:p-[16px] rounded-[8px];
+      @apply md:p-[12px] lg:p-[16px] rounded-[8px];
     }
 
     img {
-      @apply lg:w-[388px] lg:h-[365px] mx-auto;
+      @apply w-[220px] h-[190px] lg:w-[388px] lg:h-[365px] mx-auto;
     }
   
     p {
@@ -296,19 +295,20 @@ body {
     }
 
     h4 {
-      @apply text-h4 text-secondary-800;
+      @apply text-h6 lg:text-h4 text-secondary-800;
     }
 
     .details {
-      @apply flex justify-between items-center gap-[32px];
+      @apply mt-[8px] w-[220px] lg:w-full flex justify-between items-center gap-[8px];
     }
 
     .quantity {
-      @apply flex border-2 p-[8px] gap-[5px] items-center;
+      @apply flex border-2 lg:p-[8px] lg:gap-[5px] items-center;
 
     button {
       @apply flex items-center justify-center
-            w-[32px] h-[32px]
+            w-[16px]  h-[16px]
+            lg:w-[32px] lg:h-[32px]
             rounded-[4px]
             cursor-pointer
             hover:bg-accent-400;
