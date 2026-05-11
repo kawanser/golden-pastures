@@ -22,12 +22,12 @@ const ProductCard = ({ imgPath, name, price }) => {
         <div className="details">
           <div className="text-area">
             <p>{name}</p>
-            <p>${price}</p>
+            <h4>${price}</h4>
           </div>
           <div className="quantity">
-            <span onClick={handleMinus}>-</span>
-            <p>{count}</p>
-            <span onClick={handleAdd}>+</span>
+            <button onClick={handleMinus}>-</button>
+            <h4 className="count">{count}</h4>
+            <button onClick={handleAdd}>+</button>
           </div>
         </div>
       </div>
