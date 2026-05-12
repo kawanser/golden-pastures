@@ -318,6 +318,29 @@ body {
         @apply w-[32px] text-center;
       }
     }
+  }
+   #contact {
+    @apply w-full min-h-screen;
+
+    h1 {
+      @apply text-accent-600 mt-[96px] top-[120px] lg:top-(--nav-height) z-10 text-h4 md:text-h3 lg:text-h2 font-thin text-center lg:text-center p-[60px];
+    }
+
+    form {
+      @apply flex flex-col gap-[20px] max-w-[300px] md:max-w-[600px] mx-auto mt-[16px];
+
+      input {
+        @apply bg-accent-50 border-1 border-black p-[8px];
+      }
+      
+      textarea {
+        @apply bg-accent-50 border-1 border-black p-[8px];
+      }
+
+      button {
+        @apply bg-accent-500 text-h6 lg:text-h4 rounded-[12px] h-[48px] lg:h-[63px] p-[8px] text-center cursor-pointer hover:bg-accent-400 hover:text-primary-300;
+      }
+    }
 
   }
 }
