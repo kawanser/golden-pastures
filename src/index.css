@@ -293,7 +293,7 @@ body {
     }
   }
   .cart-btn {
-    @apply bg-accent-400 text-white p-[12px] rounded-[8px] cursor-pointer hover:bg-accent-500;
+    @apply bg-accent-400 text-white p-[4px] lg:p-[12px] rounded-[8px] cursor-pointer hover:bg-accent-500;
   }
  
   .cart-count {
