@@ -278,10 +278,19 @@ body {
   }
 
   #product-card {
-    @apply flex items-center justify-center 
+    @apply flex items-center justify-center relative
           gap-[8px] w-[250px] h-[350px]
           lg:gap-[16px] lg:w-[420px] lg:h-[496px] 
         bg-secondary-100 rounded-[16px] drop-shadow-[4px_4px_4px_rgba(0,0,0,0.25)];
+
+    .toast {
+      @apply absolute top-[10px] right-[10px]
+      bg-primary-500 text-white
+      px-[12px] py-[6px]
+      rounded-[8px]
+      text-sm
+      shadow-lg;
+    }
   }
   .cart-btn {
     @apply bg-accent-400 text-white p-[12px] rounded-[8px] cursor-pointer hover:bg-accent-500;
