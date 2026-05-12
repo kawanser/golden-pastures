@@ -1,8 +1,11 @@
 import React from 'react'
 import { navLinks } from "../../constants";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { ShoppingCart } from 'lucide-react';
 
 const Nav = () => {
+  const { totalItems } = useCart();
   return (
     <nav>
       <div id="about">
@@ -15,6 +18,11 @@ const Nav = () => {
               <Link to={link.path}>{link.title}</Link>
             </li>
           ))}
+          <Link to="/cart" className="cart-icon">
+            <ShoppingCart />
+
+            <span className="cart-count">{totalItems}</span>
+          </Link>
         </ul>
       </div>
     </nav>
